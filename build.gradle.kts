@@ -27,7 +27,6 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation("dev.kord:kord-core:feature-native-SNAPSHOT")
-                implementation("dev.kord.x:emoji:feature-mpp-SNAPSHOT")
             }
         }
         mingwTarget.apply {
