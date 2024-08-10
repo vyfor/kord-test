@@ -26,8 +26,25 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                // implementation("dev.kord:kord-core:feature-native-SNAPSHOT")
-                implementation("dev.kord.x:emoji:feature-mpp-SNAPSHOT")
+                implementation("io.github.jan-tennert.supabase:supabase-kt:2.5.4-wasm0")
+                implementation("io.github.jan-tennert.supabase:postgrest-kt:2.5.4-wasm0")
+                implementation("dev.kord:kord-core:feature-native-SNAPSHOT")
+                // implementation("dev.kord.x:emoji:feature-mpp-SNAPSHOT")
+            }
+        }
+        val mingwX64 by getting {
+            dependencies {
+                implementation("io.ktor:ktor-client-winhttp:3.0.0-beta-2")
+            }
+        }
+        val linuxX64 by getting {
+            dependencies {
+                implementation("io.ktor:ktor-client-cio:3.0.0-beta-2")
+            }
+        }
+        val linuxArm64 by getting {
+            dependencies {
+                implementation("io.ktor:ktor-client-cio:3.0.0-beta-2")
             }
         }
         mingwTarget.apply {
