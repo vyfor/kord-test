@@ -29,6 +29,7 @@ kotlin {
         binaries {
             executable {
                 entryPoint = "vyfor.main"
+                linkerOpts("-L/usr/local/lib", "-lcurl")
             }
         }
     }
