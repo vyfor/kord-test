@@ -39,12 +39,9 @@ jobs:
             ~/.konan/**/*
           key: kotlin-konan
 
-      - name: Setup Dependencies
-        run: |
-          bash ./build_curl.sh
-
       - name: Build project
         run: |
+          bash ./build_curl.sh
           ls /usr/local/lib | grep curl
           ./gradlew linuxX64MainBinaries --parallel --no-daemon
   build-windows:
