@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+
 plugins {
     kotlin("multiplatform") version "2.0.0"
 }
@@ -22,6 +24,14 @@ kotlin {
         macosX64(),
         macosArm64()
     )
+
+    targets.withType<KotlinNativeTarget> {
+        binaries {
+            executable {
+                entryPoint = "vyfor.main"
+            }
+        }
+    }
     
     sourceSets {
         val commonMain by getting {
