@@ -44,7 +44,9 @@ jobs:
           bash ./build_curl.sh
 
       - name: Build project
-        run: ./gradlew linuxX64MainBinaries --parallel --no-daemon
+        run: |
+          ls /usr/local/lib | grep curl
+          ./gradlew linuxX64MainBinaries --parallel --no-daemon
   build-windows:
     name: Build on Windows
     runs-on: windows-latest
