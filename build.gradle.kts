@@ -54,7 +54,10 @@ kotlin {
 
                 implementation("dev.kord:kord-core:feature-native-SNAPSHOT")
                 implementation("dev.kord.x:emoji:feature-mpp-SNAPSHOT")
-                // implementation("io.github.vyfor:cordex:0.1.0")
+                implementation("io.github.vyfor:cordex:0.1.0") {
+                  exclude("dev.kord")
+                  exclude("io.ktor")
+                }
             }
         }
         val mingwX64Main by getting {
