@@ -44,7 +44,7 @@ kotlin {
         }
         val mingwX64Main by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-winhttp:3.0.0-beta-2")
+                // implementation("io.ktor:ktor-client-winhttp:3.0.0-beta-2")
             }
         }
         val linuxX64Main by getting {
