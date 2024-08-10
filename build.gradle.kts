@@ -38,7 +38,7 @@ kotlin {
             dependencies {
                 implementation("io.github.jan-tennert.supabase:supabase-kt:2.5.4-wasm0")
                 implementation("io.github.jan-tennert.supabase:postgrest-kt:2.5.4-wasm0")
-                implementation("dev.kord:kord-core:feature-native-SNAPSHOT")
+                // implementation("dev.kord:kord-core:feature-native-SNAPSHOT")
                 // implementation("dev.kord.x:emoji:feature-mpp-SNAPSHOT")
             }
         }
