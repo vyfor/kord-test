@@ -49,12 +49,12 @@ kotlin {
         }
         val linuxX64Main by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-curl:3.0.0-beta-2")
+                // implementation("io.ktor:ktor-client-curl:3.0.0-beta-2")
             }
         }
         val linuxArm64Main by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-curl:3.0.0-beta-2")
+                // implementation("io.ktor:ktor-client-curl:3.0.0-beta-2")
             }
         }
         mingwTarget.apply {
