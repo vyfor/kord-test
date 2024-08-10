@@ -9,7 +9,7 @@ wget https://curl.haxx.se/download/curl-${VERSION}.tar.gz
 tar -xzvf curl-${VERSION}.tar.gz 
 rm -f curl-${VERSION}.tar.gz
 cd curl-${VERSION}
-./configure --prefix=/usr/local --with-ssl --with-nghttp2 --enable-websockets
+./configure --prefix=/usr/lib --with-ssl --with-nghttp2 --enable-websockets
 make -j4
 sudo make install
 sudo ldconfig
