@@ -29,7 +29,6 @@ kotlin {
         binaries {
             executable {
                 entryPoint = "vyfor.main"
-                linkerOpts("-L/usr/local/lib", "-lcurl")
             }
         }
     }
@@ -37,25 +36,25 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                // implementation("io.github.jan-tennert.supabase:supabase-kt:2.5.4-wasm0")
-                // implementation("io.github.jan-tennert.supabase:postgrest-kt:2.5.4-wasm0")
+                implementation("io.github.jan-tennert.supabase:supabase-kt:2.5.4-wasm0")
+                implementation("io.github.jan-tennert.supabase:postgrest-kt:2.5.4-wasm0")
                 implementation("dev.kord:kord-core:feature-native-SNAPSHOT")
                 // implementation("dev.kord.x:emoji:feature-mpp-SNAPSHOT")
             }
         }
         val mingwX64Main by getting {
             dependencies {
-                // implementation("io.ktor:ktor-client-winhttp:3.0.0-beta-2")
+                implementation("io.ktor:ktor-client-winhttp:3.0.0-beta-2")
             }
         }
         val linuxX64Main by getting {
             dependencies {
-                // implementation("io.ktor:ktor-client-curl:3.0.0-beta-2")
+                implementation("io.ktor:ktor-client-cio:3.0.0-beta-2")
             }
         }
         val linuxArm64Main by getting {
             dependencies {
-                // implementation("io.ktor:ktor-client-curl:3.0.0-beta-2")
+                implementation("io.ktor:ktor-client-cio:3.0.0-beta-2")
             }
         }
         mingwTarget.apply {
