@@ -32,17 +32,17 @@ kotlin {
                 // implementation("dev.kord.x:emoji:feature-mpp-SNAPSHOT")
             }
         }
-        val mingwX64 by getting {
+        val mingwX64Main by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-winhttp:3.0.0-beta-2")
             }
         }
-        val linuxX64 by getting {
+        val linuxX64Main by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-cio:3.0.0-beta-2")
             }
         }
-        val linuxArm64 by getting {
+        val linuxArm64Main by getting {
             dependencies {
                 implementation("io.ktor:ktor-client-cio:3.0.0-beta-2")
             }
