@@ -39,11 +39,13 @@ jobs:
             ~/.konan/**/*
           key: kotlin-konan
 
-      - name: Build project
+      - name: Build libcurl
         run: |
           bash ./build_curl.sh
           ls /usr/local/lib | grep curl
-          ./gradlew linuxX64MainBinaries --parallel --no-daemon
+
+      - name: Build project
+        run: ./gradlew linuxX64MainBinaries --parallel --no-daemon
   build-windows:
     name: Build on Windows
     runs-on: windows-latest
