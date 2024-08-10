@@ -40,7 +40,7 @@ jobs:
           key: kotlin-konan
 
       - name: Build project
-        run: ./gradlew compileKotlinLinuxX64 --parallel --no-daemon
+        run: ./gradlew linuxX64MainBinaries --parallel --no-daemon
   build-windows:
     name: Build on Windows
     runs-on: windows-latest
@@ -67,4 +67,4 @@ jobs:
           key: kotlin-konan
 
       - name: Build project
-        run: ./gradlew compileKotlinMingWX64 --parallel --no-daemon
+        run: ./gradlew mingwX64MainBinaries --parallel --no-daemon
