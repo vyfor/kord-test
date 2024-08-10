@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
     kotlin("multiplatform") version "2.0.0"
+    kotlin("plugin.serialization") version "2.0.0"
 }
 
 group = "vyfor"
@@ -39,6 +40,9 @@ kotlin {
                 implementation("io.github.jan-tennert.supabase:supabase-kt:2.5.4-wasm0")
                 implementation("io.github.jan-tennert.supabase:postgrest-kt:2.5.4-wasm0")
                 implementation("dev.kord:kord-core:feature-native-SNAPSHOT")
+                implementation("io.ktor:ktor-client-core:3.0.0-beta-2")
+                implementation("io.github.reactivecircus.cache4k:cache4k:0.13.0")
+                
                 // implementation("dev.kord.x:emoji:feature-mpp-SNAPSHOT")
             }
         }
