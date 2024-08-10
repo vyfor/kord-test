@@ -42,7 +42,7 @@ jobs:
       - name: Setup Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libcurl4-openssl-dev
+          sudo apt-get install -y libcurl4-gnutls-dev
 
       - name: Build project
         run: ./gradlew linuxX64MainBinaries --parallel --no-daemon
