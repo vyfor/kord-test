@@ -26,7 +26,9 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation("dev.kord.x:emoji:feature-mpp-SNAPSHOT")
+                implementation("dev.kord.x:emoji:feature-mpp-SNAPSHOT") {
+                    exclude("dev.kord", "kord-core")
+                }
                 implementation("dev.kord:kord-core:feature-native-SNAPSHOT")
             }
         }
