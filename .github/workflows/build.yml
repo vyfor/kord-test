@@ -39,10 +39,8 @@ jobs:
             ~/.konan/**/*
           key: kotlin-konan
 
-      - name: Build libcurl
-        run: |
-          bash ./build_curl.sh
-          ls /usr/local/lib | grep curl
+      - name: Setup curl
+        uses: kordlib/setup-curl@v1
 
       - name: Build project
         run: ./gradlew linuxX64MainBinaries --parallel --no-daemon
