@@ -53,8 +53,8 @@ kotlin {
                 implementation("io.github.reactivecircus.cache4k:cache4k:0.13.0")
 
                 implementation("dev.kord:kord-core:feature-native-SNAPSHOT")
-                implementation("dev.kord.x:emoji:feature-mpp-SNAPSHOT")
-                implementation("io.github.vyfor:cordex:0.1.0")
+                // implementation("dev.kord.x:emoji:feature-mpp-SNAPSHOT")
+                // implementation("io.github.vyfor:cordex:0.1.0")
             }
         }
         val mingwX64Main by getting {
