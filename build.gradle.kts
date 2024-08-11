@@ -37,30 +37,11 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
-                implementation("io.github.jan-tennert.supabase:supabase-kt:2.5.4-wasm0")
-                implementation("io.github.jan-tennert.supabase:postgrest-kt:2.5.4-wasm0")
                 implementation("dev.kord:kord-core:feature-native-SNAPSHOT")
-                implementation("io.ktor:ktor-client-core:3.0.0-beta-2")
-                implementation("io.github.reactivecircus.cache4k:cache4k:0.13.0")
-                
-                // implementation("dev.kord.x:emoji:feature-mpp-SNAPSHOT")
+                implementation("dev.kord.x:emoji:feature-mpp-SNAPSHOT")
             }
         }
-        val mingwX64Main by getting {
-            dependencies {
-                implementation("io.ktor:ktor-client-winhttp:3.0.0-beta-2")
-            }
-        }
-        val linuxX64Main by getting {
-            dependencies {
-                implementation("io.ktor:ktor-client-cio:3.0.0-beta-2")
-            }
-        }
-        val linuxArm64Main by getting {
-            dependencies {
-                implementation("io.ktor:ktor-client-cio:3.0.0-beta-2")
-            }
-        }
+        
         mingwTarget.apply {
             compilations["main"].defaultSourceSet.apply {
                 dependsOn(commonMain)
